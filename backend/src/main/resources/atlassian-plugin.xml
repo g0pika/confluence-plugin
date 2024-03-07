@@ -13,17 +13,16 @@
   <!-- add our web resources -->  
     <ao key="ao-module">
         <description>The module configuring the Active Objects service used by this plugin</description>
-        <entity>com.view26.pageview.Todo</entity>
         <entity>com.view26.pageview.View</entity>
     </ao>
     <servlet name="View Servlet" class="com.view26.pageview.ViewServlet" key="view-servlet">
         <description>Servlet for handling views</description>
         <url-pattern>/views</url-pattern>
-    </servlet>
-    <servlet name="Todo List &amp; Add Servlet" class="com.view26.pageview.TodoServlet" key="todo-list">
+    </servlet> 
+    <!-- <servlet name="Todo List &amp; Add Servlet" class="com.view26.pageview.TodoServlet" key="todo-list">
         <description>A servlet to add and list todos</description>
         <url-pattern>/todo/list</url-pattern>
-    </servlet>
+    </servlet> -->
   <web-resource key="confluence-resources" name="confluence Web Resources"> 
     <dependency>com.atlassian.auiplugin:ajs</dependency>  
     <resource type="download" name="confluence.css" location="/css/confluence.css"/>  

@@ -1,4 +1,4 @@
-package com.view26.test;
+package com.view26.pageview;
 
 import com.atlassian.activeobjects.external.ActiveObjects;
 import com.atlassian.plugin.spring.scanner.annotation.imports.ComponentImport;

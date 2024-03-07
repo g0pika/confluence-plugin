@@ -1,4 +1,4 @@
-package com.view26.test;
+package com.view26.pageview;
 
 import com.atlassian.activeobjects.tx.Transactional;
 import java.util.List;

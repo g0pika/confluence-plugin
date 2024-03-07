@@ -15,7 +15,7 @@
     <dependency>com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path</dependency>
     <resource type="download" name="bundled.dynamictable.js" location="frontend/bundled.dynamictable.js"/>
   </web-resource>
-  <web-resource key="assets-0b7aea71-df5a-4922-b4d0-0760a7a67fba">
+  <web-resource key="assets-570ee82c-3f4f-491d-bb32-e0fac9369c9e">
     <transformation extension="js">
       <transformer key="jsI18n"/>
     </transformation>

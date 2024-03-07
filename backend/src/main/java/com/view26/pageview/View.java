@@ -1,4 +1,4 @@
-package com.view26.test;
+package com.view26.pageview;
 
 import net.java.ao.Entity;
 import net.java.ao.Preload;

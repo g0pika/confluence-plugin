@@ -1,4 +1,4 @@
-package com.view26.test;
+package com.view26.pageview;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -53,6 +53,6 @@ public final class ViewServlet extends HttpServlet {
             viewService.addView(viewName, "owner");
         }
 
-        res.sendRedirect(req.getContextPath() + "/your-views-path");
+        res.sendRedirect(req.getContextPath() + "/plugin/servlet/views");
     }
 }
