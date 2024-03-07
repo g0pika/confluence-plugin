@@ -204,6 +204,7 @@
         </plugins>
     </build>
     <properties>
+        <ao.version>1.2.2</ao.version>
         <confluence.version>7.7.1</confluence.version>
         <confluence.data.version>7.7.1</confluence.data.version>
         <atlassian.spring.scanner.version>1.2.13</atlassian.spring.scanner.version>
