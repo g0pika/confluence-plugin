@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="com.view26.pageview" name="${project.name}" plugins-version="2"> 
+  <plugin-info> 
+    <description>${project.description}</description>  
+    <version>${project.version}</version>  
+    <vendor name="${project.organization.name}" url="${project.organization.url}"/>  
+    <param name="plugin-icon">images/pluginIcon.png</param>  
+    <param name="plugin-logo">images/pluginLogo.png</param> 
+  </plugin-info>  
+  <!-- add our i18n resource -->  
+  <resource type="i18n" name="i18n" location="confluence"/>  
+  <!-- add our web resources -->  
+  <web-resource key="confluence-resources" name="confluence Web Resources"> 
+    <dependency>com.atlassian.auiplugin:ajs</dependency>  
+    <resource type="download" name="confluence.css" location="/css/confluence.css"/>  
+    <resource type="download" name="confluence.js" location="/js/confluence.js"/>  
+    <resource type="download" name="images/" location="/images"/>  
+    <context>confluence</context> 
+  </web-resource>
+    <!-- add our web resources -->  
+  <web-resource key="jira-react-atlaskit-resources" name="jira-react-atlaskit Web Resources"> 
+    <dependency>com.atlassian.auiplugin:ajs</dependency>  
+    <transformation extension="soy">
+                <transformer key="soyTransformer">
+                        <functions>com.atlassian.confluence.plugins.soy:soy-core-functions</functions>
+                </transformer>
+    </transformation>
+    <resource type="soy" name="soyui" location="/templates/servlets.soy"/>
+    <resource type="download" name="confluence.css" location="/css/confluence.css"/>  
+    <resource type="download" name="confluence.js" location="/js/confluence.js"/>  
+    <resource type="download" name="images/" location="/images"/>  
+    <context>confluence</context> 
+  </web-resource>  
+
+    <!-- <servlet name="Form Servlet" i18n-name-key="form-servlet.name" key="form-servlet" class="com.view26.pageview.servlet.FormServlet"> 
+    <description key="form-servlet.description">The Form Servlet Plugin</description>  
+    <url-pattern>/form</url-pattern>
+  </servlet>   -->
+
+  <web-item name="VIEW26-Test" i18n-name-key="VIEW26" key="view-26--test" section="system.header/left" weight="1000"> 
+    <description key="view-26--test.description">Some Desc</description>  
+    <label key="view-26--test.label"></label>  
+    <!-- <link linkId="configuration-link">/plugins/servlet/form</link> -->
+     <link>/plugins/examples/hello.action</link>
+  </web-item>
+  
+  <xwork application="confluence" name="analytics" key="analyticsActionkey">
+    <package name="examples" extends="default" namespace="/plugins/examples">
+        <default-interceptor-ref name="defaultStack"/>
+        <action name="hello" class="com.view26.pageview.service.AnalyticsAction">
+            <result name="success" type="velocity">/templates/test.vm</result>
+        </action>
+    </package>
+</xwork>
+</atlassian-plugin>
+
