@@ -11,6 +11,14 @@
   <!-- add our i18n resource -->  
   <resource type="i18n" name="i18n" location="confluence"/>  
   <!-- add our web resources -->  
+    <ao key="ao-module">
+        <description>The module configuring the Active Objects service used by this plugin</description>
+        <entity>com.view26.Todo</entity>
+    </ao>
+    <servlet name="Todo List &amp; Add Servlet" class="com.view26.TodoServlet" key="todo-list">
+        <description>A servlet to add and list todos</description>
+        <url-pattern>/todo/list</url-pattern>
+    </servlet>
   <web-resource key="confluence-resources" name="confluence Web Resources"> 
     <dependency>com.atlassian.auiplugin:ajs</dependency>  
     <resource type="download" name="confluence.css" location="/css/confluence.css"/>  
